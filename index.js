@@ -3,7 +3,7 @@ const app = express();
 const body_parser = require('body-parser');
 const router = require('./Routes/appRouter');
 const dbConnection = require('./Config/database');
-const port = process.env.port || 5200;
+const port = process.env.PORT || 5200;
 const mongoose = require("mongoose");
 require('dotenv').config();
 
