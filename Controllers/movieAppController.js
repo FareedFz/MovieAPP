@@ -20,8 +20,13 @@ const users={
             ReleaseDate:date
 
         })
-        addMovie.save().then(addMovie=>{
-            res.send(addMovie)
+        addMovie.save(function(err){
+            if(!err){
+                res.send("product created succesfully")
+            }
+            else{
+                res.send(err)
+            }
         })
 
     },
